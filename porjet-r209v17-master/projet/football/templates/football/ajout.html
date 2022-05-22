@@ -4,7 +4,7 @@
 {% block head %} Saisie d'un nouveau Club{% endblock %}
 
 {%  block content  %}
-    <a href="/football" > Liste des clubs </a>
+    <a href="/football" style="font-weight: bold;" > Liste des clubs </a>
 
          {% if id != "" %}
                 <form method="post" action ="/football/updatetraitement/{{id}}/">
