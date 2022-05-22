@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-{% load static %}
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="{%static 'football/index.css'%}">
-<title>index</title>
-</head>
-<body>
-<h1>Bienvenu</h1>
+{%  extends 'Main.html'%}
+{%  block title %}
+    index
+{%  endblock %}
+
+
+{% block head %}
+{{ club }}
+{% endblock %}
+{%  block content  %}
+<h1 >Bienvenu sur ma page web</h1>
 <a href="/football/ajout/"> Ajouter un club</a>
+<article style="margin-top: 5em;">
 {% for l in liste %}
+<div style="margin-top: 1em;margin-left: 8em;">
     <li> {{l}} <a href="/football/affiche/{{l.id}}">affiche</a> <a href="/football/update/{{l.id}}">update</a> <a href="/football/delete/{{l.id}}">delete</a></li>
-
+</div>
+    </article>
 {%endfor%}
-</body>
-
-</html>
+{% endblock %}

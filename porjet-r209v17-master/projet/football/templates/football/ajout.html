@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Title</title>
-</head>
-<body>
-    <h1> Saisie d'un nouveau Club</h1>
+{%  extends 'Main.html'%}
+{%  block title %}Title{% endblock %}
+
+{% block head %} Saisie d'un nouveau Club{% endblock %}
+
+{%  block content  %}
+    <a href="/football" > Liste des clubs </a>
 
          {% if id != "" %}
                 <form method="post" action ="/football/updatetraitement/{{id}}/">
@@ -16,5 +15,4 @@
         {{ form.as_ul }}
         <input type="submit" value="envoyer les données"\>
     </form>
-</body>
-</html>
+{% endblock %}

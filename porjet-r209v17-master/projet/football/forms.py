@@ -14,5 +14,5 @@ class ClubForm(ModelForm):
                 'fondateur' : _('Fondateur') ,
                 'date_creation' : _('date de creation'),
                 'nombre_titre' : _('nombres de titre'),
-                'classement' : _('Classement')
+                'classement' : _('Informations')
         }

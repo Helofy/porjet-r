@@ -1,4 +1,5 @@
 {%  extends 'Main.html'%}
+
 {%  block title %}
     {{  club }}
 {%  endblock %}
@@ -10,8 +11,12 @@
 
 
 {%  block content  %}
+
 Club  crée le  {{club.date_creation}} par {{ club.fondateur }}
+
+
     <p>
-        Actuellement l'équipe est à la  {{club.classement}}  place dans sa ligue.
+    {{ club.classement}}
     </p>
+
 {%  endblock %}
